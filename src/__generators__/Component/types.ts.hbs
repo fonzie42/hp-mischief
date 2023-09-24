@@ -1,0 +1,15 @@
+export interface {{> ComponentName}}Props {
+  {{#if includeSkeletonLoader }}
+  isLoading?: boolean
+  {{/if }}
+  label: string
+}
+{{#if includeContainer}}
+
+export interface {{> ComponentViewName}}Props {
+  {{#if includeSkeletonLoader }}
+  isLoading?: boolean
+  {{/if }}
+  label: string
+}
+{{/if}}
