@@ -55,6 +55,8 @@ export const isObject = (value: unknown): value is object => {
   return true;
 };
 
+export const notNullable = <T>(value: T | null): value is T => value !== null
+
 export const isOfSpecies = (property: unknown): property is Species =>
   typeof property === "string" &&
   ALL_SPECIES.some((value) => value === property);
