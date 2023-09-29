@@ -44,7 +44,7 @@ export type Character = {
   actor?: string;
   alternateActors?: string[];
   alive: boolean;
-  image: string;
+  image?: string;
 };
 
 export const CharacterValidator: Record<
@@ -60,7 +60,7 @@ export const CharacterValidator: Record<
   hogwartsStaff: isBoolean,
   actor:  (data) => optional(data, isString),
   alive: isBoolean,
-  image: isString,
+  image: (data) => optional(data, isString),
   alternateNames:  (data) => optional(data, isStringArray),
   alternateActors:  (data) => optional(data, isStringArray),
   species: isOfSpecies,
