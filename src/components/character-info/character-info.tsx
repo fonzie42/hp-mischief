@@ -33,12 +33,12 @@ name
     {image && <S.CharacterImage src={image} />}
       <S.Title>{name}</S.Title>
       <S.Subtitle>{alternateNames?.join(', ')}</S.Subtitle>
-      <S.Text>Portrayed by: {actor}</S.Text>
+      {actor && <S.Text>Portrayed by: {actor}</S.Text>}
     
     <S.Information>
       <S.Term>Species </S.Term> <S.Description>{species}</S.Description>
       <S.Term>Gender </S.Term> <S.Description> {gender}</S.Description>
-      <S.Term>House </S.Term> <S.Description> {house}</S.Description>
+      <S.Term>House </S.Term> <S.Description> {house ?? 'N/A'}</S.Description>
       <S.Term>Birth </S.Term> <S.Description> {dateOfBirth ?? 'no information'}</S.Description>
       <S.Term>Wizard? </S.Term> <S.Description>{wizard ? 'yes' : 'no'}</S.Description>
       <S.Term>Student? </S.Term> <S.Description>{hogwartsStudent ? 'yes' : 'no'}</S.Description>

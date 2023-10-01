@@ -3,11 +3,23 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   background: #c8ad80;
-  padding: 32px;
-  margin: 8px;
   background-image: url("https://images.unsplash.com/photo-1615800098746-73af8261e3df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1888&q=80");
   background-blend-mode: overlay;
-  // add border and internal border
+  margin: 0;
+  text-align: center;
+  box-shadow: inset 0px 0px 16px 7px #e4b972;
+
+  padding: 32px;
+
+  ${mediaQueries.mobileTiny`
+    width: calc(100vw - 16px);
+    padding: 32px 8px;
+  `}
+
+  ${mediaQueries.tablet`
+    padding: 32px;
+    margin: 8px;
+  `}
 `;
 
 export const Information = styled.div`
@@ -18,9 +30,10 @@ export const Information = styled.div`
   flex-direction: column;
   grid-template-columns: 140px 1fr;
   text-align: right;
+  
   ${mediaQueries.tablet`
-  // display: flex;
-  // flex-direction: row;
+    margin-top: 48px;
+    grid-template-columns: 140px 1fr 140px 1fr;
   `};
 `;
 export const Term = styled.div`
