@@ -1,5 +1,11 @@
 import { mediaQueries } from "@/styles";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const reveal = keyframes`
+
+  from {transform: translate3d(-110%, 100%,0) rotate(90deg);}
+  to {transform: translate3d(0) rotate(0);}
+`
 
 export const Wrapper = styled.div`
   background: #c8ad80;
@@ -8,7 +14,9 @@ export const Wrapper = styled.div`
   margin: 0;
   text-align: center;
   box-shadow: inset 0px 0px 16px 7px #e4b972;
+  animation: ${reveal} 1s forwards;
 
+  
   padding: 32px;
 
   ${mediaQueries.mobileTiny`
