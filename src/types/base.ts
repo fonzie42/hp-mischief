@@ -8,7 +8,7 @@ import {
   ALL_WAND_WOOD,
   ALL_WAND_CORE,
   ALL_PATRONUS,
-} from "./CONSTANTS";
+} from "./CONSTANTS"
 
 export type Species = (typeof ALL_SPECIES)[number];
 

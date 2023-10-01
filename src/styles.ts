@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css } from 'styled-components'
 
 export const mediaQueries = {
   mobileTiny: (template, ...args) => css`
@@ -24,4 +24,4 @@ export const mediaQueries = {
       ${css(template, ...args)}
     }
   `
-};
+}

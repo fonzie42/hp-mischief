@@ -1,11 +1,11 @@
  import {
   useQuery,
-} from "@tanstack/react-query";
+} from "@tanstack/react-query"
 
-import { useEffect } from "react";
-import { getAllCharacters } from "./api/base";
-import { useCharacterStore } from "./store/store";
-import { ListCharacters } from "./routes/list-characters";
+import { useEffect } from "react"
+import { getAllCharacters } from "./api/base"
+import { useCharacterStore } from "./store/store"
+import { ListCharacters } from "./routes/list-characters"
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
 
   return (
       <ListCharacters/>
-  );
+  )
 }
 
-export default App;
+export default App

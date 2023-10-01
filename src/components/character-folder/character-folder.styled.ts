@@ -1,8 +1,8 @@
-import { mediaQueries } from "@/styles";
-import styled, {css, keyframes} from "styled-components";
+import { mediaQueries } from "@/styles"
+import styled, {css, keyframes} from "styled-components"
 import {
   NavLink,
-} from "react-router-dom";
+} from "react-router-dom"
 
 const reveal = keyframes`
 from {transform: skew(10deg, -10deg) translate3d(100%,100px,0)}
@@ -61,7 +61,7 @@ export const Wrapper = styled(NavLink)<{animationDelay: string | null}>`
   ${mediaQueries.tablet`
      font-size: 44px;
   `}
-`;
+`
 
 export const FoldersWrapper = styled.div`
   width: 100%;

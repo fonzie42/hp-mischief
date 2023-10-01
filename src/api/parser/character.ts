@@ -1,8 +1,8 @@
-import { Character, CharacterValidator } from "../../types/character";
+import { Character, CharacterValidator } from "../../types/character"
 
 export const ParseDataToCharacter = (rawData: unknown): Character | null => {
   if (!rawData || typeof rawData !== "object") {
-    return null;
+    return null
   }
 
   const {
@@ -26,7 +26,7 @@ export const ParseDataToCharacter = (rawData: unknown): Character | null => {
     image,
     alternate_names: alternateNames,
     alternate_actors: alternateActors,
-  } = rawData as any;
+  } = rawData as any // eslint-disable-line @typescript-eslint/no-explicit-any
 
   const maybeCharacter = {
     id,
@@ -49,14 +49,14 @@ export const ParseDataToCharacter = (rawData: unknown): Character | null => {
     image,
     alternateNames,
     alternateActors,
-  } as Character;
+  } as Character
 
   const isValid = (
     Object.keys(CharacterValidator) as Array<keyof Character>
   ).reduce((previous, key) => {
-    const hasCorrectProperty = CharacterValidator[key](maybeCharacter[key]);
-    return hasCorrectProperty && previous;
-  }, true);
+    const hasCorrectProperty = CharacterValidator[key](maybeCharacter[key])
+    return hasCorrectProperty && previous
+  }, true)
 
-  return isValid ? maybeCharacter : null;
-};
+  return isValid ? maybeCharacter : null
+}

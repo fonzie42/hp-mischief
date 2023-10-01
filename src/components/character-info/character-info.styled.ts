@@ -1,5 +1,5 @@
-import { mediaQueries } from "@/styles";
-import styled, { keyframes } from "styled-components";
+import { mediaQueries } from "@/styles"
+import styled, { keyframes } from "styled-components"
 
 const reveal = keyframes`
 
@@ -28,7 +28,7 @@ export const Wrapper = styled.div`
     padding: 32px;
     margin: 8px;
   `}
-`;
+`
 
 export const Information = styled.div`
   font-family: "Special Elite", cursive;
@@ -43,48 +43,48 @@ export const Information = styled.div`
     margin-top: 48px;
     grid-template-columns: 140px 1fr 140px 1fr;
   `};
-`;
+`
 export const Term = styled.div`
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 18px;
   // border-bottom: 1px dotted black;
-`;
+`
 
 export const Description = styled.div`
   padding-left: 1rem;
   margin: 0 1rem;
   text-align: left;
   border-bottom: 1px dotted black;
-`;
+`
 
 export const CharacterImage = styled.img`
   object-fit: cover;
   width: 160px;
   height: 240px;
-`;
+`
 
 export const InfoWrapper = styled.div`
   display: flex;
   margin: 8px;
   border-bottom: 1px dotted black;
-`;
+`
 
 export const Title = styled.h2`
   font-family: "Jim Nightshade", cursive;
   font-size: 44px;
   margin: 8px 0px;
-`;
+`
 
 export const Subtitle = styled.h2`
   font-style: italic;
   font-family: "Jim Nightshade", cursive;
   font-size: 18px;
   margin: 8px 0px;
-`;
+`
 
 export const Text = styled.p`
   font-family: "Special Elite", cursive;
   letter-spacing: 2px;
   margin: 0;
-`;
+`

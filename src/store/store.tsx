@@ -1,5 +1,5 @@
-import { Character } from "@/types/character";
-import { create } from "zustand";
+import { Character } from "@/types/character"
+import { create } from "zustand"
 
 type State = {
   characters: Character[];
@@ -12,8 +12,8 @@ function upsert<T>(
   item: T,
   filterFunction: (argument: T) => boolean
 ) {
-  const newData = data.filter(filterFunction);
-  return [...newData, item];
+  const newData = data.filter(filterFunction)
+  return [...newData, item]
 }
 
 export const useCharacterStore = create<State>((set) => ({
@@ -30,4 +30,4 @@ export const useCharacterStore = create<State>((set) => ({
         (item) => item.id !== characterData.id
       ),
     })),
-}));
+}))

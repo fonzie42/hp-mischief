@@ -1,15 +1,11 @@
-import {  getCharacterById } from "@/api/base";
-import { CharacterInfo } from "@/components/character-info";
-import { useCharacterStore } from "@/store/store";
-import { Form, useLoaderData } from "react-router-dom";
+import {  getCharacterById } from "@/api/base"
+import { CharacterInfo } from "@/components/character-info"
+import { useCharacterStore } from "@/store/store"
+import { useLoaderData } from "react-router-dom"
  import {
   useQuery,
-  useMutation,
-  useQueryClient,
-  QueryClient,
-  QueryClientProvider,
-} from "@tanstack/react-query";
-import { useEffect } from "react";
+} from "@tanstack/react-query"
+import { useEffect } from "react"
 
 export const characterLoader = ({ params }) => { //@todo fix type for router
   console.log({ params })  
@@ -17,7 +13,7 @@ export const characterLoader = ({ params }) => { //@todo fix type for router
 }
 
 export const Character = () => {
-  const { characterId } = useLoaderData(); //@todo fix type for router
+  const { characterId } = useLoaderData() //@todo fix type for router
   const characters = useCharacterStore(state => state.characters)
   const updateCharacter = useCharacterStore(state => state.updateCharacter)
 
@@ -34,9 +30,9 @@ export const Character = () => {
 
   useEffect(() => {
     data && updateCharacter(data)
-  }, [data])
+  }, [data, updateCharacter])
 
-  const isLoading = isLoadingQuery && enabled;
+  const isLoading = isLoadingQuery && enabled
 
   if (isLoading) {
     console.log('loading')

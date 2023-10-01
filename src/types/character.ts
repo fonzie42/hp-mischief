@@ -7,7 +7,7 @@ import {
   HairColour,
   Wand,
   Patronus,
-} from "./base";
+} from "./base"
 
 import {
   isString,
@@ -22,7 +22,7 @@ import {
   isOfEyeColour,
   isOfHairColour,
   optional,
-} from "./type-guards";
+} from "./type-guards"
 
 export type Character = {
   id: string;
@@ -71,4 +71,4 @@ export const CharacterValidator: Record<
   hairColour:  (data) => optional(data, isOfHairColour),
   wand: () => true, // @todo fix this
   patronus:  (data) => optional(data, isOfPatronus),
-};
+}
