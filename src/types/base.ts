@@ -27,7 +27,7 @@ export type WandWood = (typeof ALL_WAND_WOOD)[number];
 export type WandCore = (typeof ALL_WAND_CORE)[number];
 
 export type Wand = {
-  wood: WandWood;
+  wood?: WandWood;
   core?: WandCore;
   length?: number;
 };
