@@ -12,7 +12,7 @@ const reveal = keyframes`
   }
 `
 
-export const Wrapper = styled(NavLink) <{ $animationDelay: string | null }>`
+export const Wrapper = styled(NavLink)<{ $animationDelay: string | null }>`
   color: #2b2b2b;
   background: #c8ad80;
   padding: 8px 20px;
@@ -29,20 +29,19 @@ export const Wrapper = styled(NavLink) <{ $animationDelay: string | null }>`
   margin-left: 2em;
   margin-right: -2em;
   display: flex;
-   box-shadow: 16px -8px 14px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 16px -8px 14px 5px rgba(0, 0, 0, 0.15);
   margin-left: 2em;
   transform: skew(10deg, -10deg);
 
   &:visited {
     color: #4d4d4d;
   }
-  
+
   ${({ $animationDelay }) =>
     $animationDelay &&
     css`
-      animation: ${reveal} 0.4s cubic-bezier(.25, .25, .25, 1.25);
+      animation: ${reveal} 0.4s cubic-bezier(0.25, 0.25, 0.25, 1.25);
       animation-delay: ${$animationDelay};
-      
     `}
 
   &:hover {
@@ -72,16 +71,16 @@ export const Wrapper = styled(NavLink) <{ $animationDelay: string | null }>`
 
 export const FoldersWrapper = styled.div`
   width: 100%;
-  padding: 64px 0;
+  padding-top: 64px;
+  padding-bottom: 250px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
 
   ${mediaQueries.mobileTiny`
-  
-padding: 64px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+    padding: 64px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   `}
 `

@@ -83,6 +83,13 @@ export const Subtitle = styled.h2`
   margin: 8px 0px;
 `
 
+export const FavoriteButton = styled.button<{$isFavorite?: boolean}>`
+  background: ${({$isFavorite}) => $isFavorite ? '#ff9f00' : 'white'};
+  border: none;
+  padding: 8px;
+  margin: 8px;
+`
+
 export const Text = styled.p`
   font-family: "Special Elite", cursive;
   letter-spacing: 2px;
