@@ -1,14 +1,14 @@
-import { FC } from "react";
+import { FC } from "react"
 
-import { AnimationWrapper, Stone, Veil, Wand } from "./spinner.styled";
+import * as S from "./spinner.styled"
 
 export const Spinner: FC = () => {
   return (
-    <AnimationWrapper>
-      <Veil>
-        <Stone />
-        <Wand />
-      </Veil>
-    </AnimationWrapper>
-  );
-};
+    <S.AnimationWrapper>
+      <S.Veil>
+        <S.Stone />
+        <S.Wand />
+      </S.Veil>
+    </S.AnimationWrapper>
+  )
+}

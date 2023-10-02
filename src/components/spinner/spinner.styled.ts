@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from "styled-components"
 
 const loadingStone = keyframes`
   80%, 100% {
@@ -12,6 +12,13 @@ const loadingWand = keyframes`
 `
 
 export const AnimationWrapper = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;  
+  height: 100vh; 
+  width: 100vw; 
+  display: grid; 
+  place-items: center
 `
 
 // inspired by this pen: https://codepen.io/afonsopacifer/pen/GZrxzq
