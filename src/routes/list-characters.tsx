@@ -5,6 +5,9 @@ import { useEffect, useState } from "react"
 import { useQuery } from "@tanstack/react-query"
 import { getAllCharacters } from "@/api/base"
 import { Spinner } from "@/components/spinner"
+import { SearchBar } from "@/components/search-bar"
+import { NotFoundText } from "./list-characters.styled"
+import { BackButton } from "@/components/back-button"
 
 export const ListCharacters = ({
   type,
@@ -67,7 +70,7 @@ export const ListCharacters = ({
         return lowerCaseName.includes(lowerCaseFilter)
       })
     )
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filter, allCharacters, staff, students, favorites])
 
   if (isLoading && data.length === 0) {
@@ -75,16 +78,26 @@ export const ListCharacters = ({
   }
 
   if (characters.length === 0) {
-    return <div>No files found.</div>
+    return (
+      <>
+        <BackButton />
+        <SearchBar
+          onChangeCallback={setFilter}
+          value={filter}
+          label="Search file"
+        />
+        <NotFoundText>No files found.</NotFoundText>
+      </>
+    )
   }
 
   return (
     <>
-      <input
-        onChange={(e) => {
-          setFilter(e.target.value)
-        }}
+      <BackButton />
+      <SearchBar
+        onChangeCallback={setFilter}
         value={filter}
+        label="Search file"
       />
       <FoldersWrapper>
         {characters.map(({ id, name }, index) => (
