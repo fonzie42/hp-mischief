@@ -7,6 +7,7 @@ export const PageListWrapper = styled.div`
   height: 100vh;
   align-items: center;
   justify-content: center;
+  margin: auto;
 `
 
 export const StyledLink = styled(NavLink)`
