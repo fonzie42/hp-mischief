@@ -20,6 +20,22 @@ export const router = createBrowserRouter([
     element: <Character />,
     loader: characterLoader,
   },
+  {
+    path: "characters/",
+    element: <ListCharacters type="all" />,
+  },
+  {
+    path: "students/",
+    element: <ListCharacters type="students" />,
+  },
+  {
+    path: "staff/",
+    element: <ListCharacters type="staff" />,
+  },
+  {
+    path: "favorites/",
+    element: <ListCharacters type="favorites" />,
+  },
 ])
 
 export const queryClient = new QueryClient()
