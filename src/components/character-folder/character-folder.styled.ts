@@ -12,7 +12,8 @@ const reveal = keyframes`
   }
 `
 
-export const Wrapper = styled(NavLink)<{ animationDelay: string | null }>`
+export const Wrapper = styled(NavLink) <{ $animationDelay: string | null }>`
+  color: #2b2b2b;
   background: #c8ad80;
   padding: 8px 20px;
   background-image: url("https://images.unsplash.com/photo-1615800098746-73af8261e3df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1888&q=80");
@@ -31,12 +32,16 @@ export const Wrapper = styled(NavLink)<{ animationDelay: string | null }>`
    box-shadow: 16px -8px 14px 5px rgba(0, 0, 0, 0.15);
   margin-left: 2em;
   transform: skew(10deg, -10deg);
+
+  &:visited {
+    color: #4d4d4d;
+  }
   
-  ${({ animationDelay }) =>
-    animationDelay &&
+  ${({ $animationDelay }) =>
+    $animationDelay &&
     css`
-      animation: ${reveal} 0.4s;
-      animation-delay: ${animationDelay};
+      animation: ${reveal} 0.4s cubic-bezier(.25, .25, .25, 1.25);
+      animation-delay: ${$animationDelay};
       
     `}
 
