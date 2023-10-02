@@ -29,7 +29,7 @@ export const Home = () => {
       return
     }
     setAllCharacters(data)
-  }, [data])
+  }, [data, setAllCharacters])
 
   if (isLoading || initialLoading) {
     return <Spinner />
@@ -38,8 +38,8 @@ export const Home = () => {
   return (
     <S.PageListWrapper>
       <S.StyledLink to="/characters">All Files</S.StyledLink>
-      <S.StyledLink to="/students">Students' Files</S.StyledLink>
-      <S.StyledLink to="/staff">Staff's Files</S.StyledLink>
+      <S.StyledLink to="/students">{"Students' Files"}</S.StyledLink>
+      <S.StyledLink to="/staff">{"Staff's Files"}</S.StyledLink>
       <S.StyledLink to="/favorites">Saved Files</S.StyledLink>
     </S.PageListWrapper>
   )

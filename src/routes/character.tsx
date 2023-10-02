@@ -7,7 +7,7 @@ import { useEffect } from "react"
 
 export const Character = () => {
   const { characterId } = useLoaderData() //@todo fix type for router
-  const {characters, updateCharacter} = useBoundStore((state) => state)
+  const { characters, updateCharacter } = useBoundStore((state) => state)
 
   const selectedCharacterFromState = characters.find(
     (item) => item.id === characterId
