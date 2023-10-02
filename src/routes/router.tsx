@@ -36,6 +36,7 @@ export const router = createBrowserRouter([
     path: "favorites/",
     element: <ListCharacters type="favorites" />,
   },
-])
+], { basename: import.meta.env.DEV ? "/" : "/hp-mischief/" }
+)
 
 export const queryClient = new QueryClient()
