@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
   margin: 0;
   text-align: center;
   box-shadow: inset 0px 0px 16px 7px #e4b972;
-  animation: ${reveal} 1s forwards;
+  animation: ${reveal} 1s forwards cubic-bezier(.25, .25, .25, 1.25);
 
   
   padding: 32px;
