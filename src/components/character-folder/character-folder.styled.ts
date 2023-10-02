@@ -83,4 +83,8 @@ export const FoldersWrapper = styled.div`
     flex-direction: column;
     align-items: flex-end;
   `}
+
+  ${mediaQueries.tablet`
+    width: 650px;
+  `}
 `
