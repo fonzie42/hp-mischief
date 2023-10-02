@@ -61,6 +61,7 @@
 
 ## Opportunities to improve
 
+- There are some `any` being used. This was to save some time, they need to be removed to ensure type safety.
 - There are no unit tests;
 - The Parser layer needs to better handle the `wand` in the character side
 - There is no feature to save the user's preferred house;

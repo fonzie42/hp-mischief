@@ -6,7 +6,9 @@ import { useQuery } from "@tanstack/react-query"
 import { useEffect } from "react"
 
 export const Character = () => {
-  const { characterId } = useLoaderData() //@todo fix type for router
+  
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const { characterId } = useLoaderData() as any //@todo fix type for router
   const { characters, updateCharacter } = useBoundStore((state) => state)
 
   const selectedCharacterFromState = characters.find(
